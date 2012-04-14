@@ -13,12 +13,15 @@ public class Gui {
         myGrid.setCellKlump(cellKlump);
         myGrid.setVisible(true);
         f.add(myGrid);
-        f.setSize(1000, 1000);
+        f.setSize(601, 601);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     void reDraw() {
-        f.setVisible(false);
-        f.setVisible(true);
+        //f.setVisible(false);
+        //f.setVisible(true);
+
+        myGrid.repaint();
     }
 
     public Grid getGrid() {

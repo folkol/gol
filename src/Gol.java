@@ -6,10 +6,24 @@ public class Gol {
     void run() {
         CellKlump cellKlump = new CellKlump();
 
-        // Set game state
-        cellKlump.getCell(15, 15).setAlive(true);
-        cellKlump.getCell(15, 16).setAlive(true);
-        cellKlump.getCell(15, 17).setAlive(true);
+        // Set game stat
+        cellKlump.getCell(37, 35).setAlive(true);
+        cellKlump.getCell(35, 35).setAlive(true);
+        cellKlump.getCell(34, 35).setAlive(true);
+        cellKlump.getCell(33, 35).setAlive(true);
+
+        cellKlump.getCell(33, 36).setAlive(true);
+
+        cellKlump.getCell(37, 37).setAlive(true);
+        cellKlump.getCell(36, 37).setAlive(true);
+
+        cellKlump.getCell(37, 38).setAlive(true);
+        cellKlump.getCell(35, 38).setAlive(true);
+        cellKlump.getCell(34, 38).setAlive(true);
+
+        cellKlump.getCell(37, 39).setAlive(true);
+        cellKlump.getCell(35, 39).setAlive(true);
+        cellKlump.getCell(33, 39).setAlive(true);
 
         Gui gui = new Gui();
         gui.launchFrame(cellKlump);
@@ -18,7 +32,7 @@ public class Gol {
             gui.getGrid().setCellKlump(cellKlump);
             gui.reDraw();
             try {
-                Thread.sleep(1000);
+                Thread.sleep(15);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

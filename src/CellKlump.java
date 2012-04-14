@@ -57,11 +57,17 @@ public class CellKlump {
     public Cell getCell(int i, int k) {
         Cell defaultCell = new Cell();
         defaultCell.setAlive(false);
-        if (i < 0 || i >= 100) {
-            return defaultCell;
+        if (i < 0 ) {
+            i = 99;
         }
-        if (k < 0 || k >= 100) {
-            return defaultCell;
+        else if (i > 99){
+            i = 0;
+        }
+        if (k < 0 ) {
+            k = 99;
+        }
+        else if (k > 99){
+            k = 0;
         }
         i = i * 100;
         int l = i + k;
