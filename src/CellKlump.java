@@ -28,7 +28,7 @@ public class CellKlump {
                 if (cellKlump.getCell(i + 1, k).isAlive()) {
                     neighborsAlive++;
                 }
-                if (cellKlump.getCell(i - 1, k).isAlive()) {
+                if (cellKlump.getCell(i - 1, k + 1).isAlive()) {
                     neighborsAlive++;
                 }
                 if (cellKlump.getCell(i, k + 1).isAlive()) {
@@ -37,7 +37,14 @@ public class CellKlump {
                 if (cellKlump.getCell(i + 1, k + 1).isAlive()) {
                     neighborsAlive++;
                 }
-                isAlive = neighborsAlive > 2;
+                boolean wasAlive = cellKlump.getCell(i, k).isAlive();
+
+                if(wasAlive) {
+                    isAlive = neighborsAlive > 1 && neighborsAlive < 4;
+                } else {
+                    isAlive = neighborsAlive == 3;
+                }
+
                 cell.setAlive(isAlive);
                 setCell(i, k, cell);
             }
