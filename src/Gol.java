@@ -56,6 +56,13 @@ public class Gol {
         cellKlump.getCell(23, 10).setAlive(true);
 
 
+//        cellKlump.getCell(22, 10).setAlive(true);
+//        cellKlump.getCell(23, 11).setAlive(true);
+//        cellKlump.getCell(24, 12).setAlive(true);
+//        cellKlump.getCell(23, 12).setAlive(true);
+//        cellKlump.getCell(24, 12).setAlive(true);
+//        cellKlump.getCell(23, 12).setAlive(true);
+
         while (true) {
             cellKlump = new CellKlump(cellKlump);
             gui.getGrid().setCellKlump(cellKlump);
